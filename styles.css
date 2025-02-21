@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex; /* Make navbar a flex container */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Vertically center children */
+  transition: all 0.3s ease-out;
+}
+
+.navbar .login button{
+    margin: 0px 10px;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+.navbar .login button:hover{
+    color: #3232ff;
+}
+
+.navbar.sticky{
+    background-color: rgb(23, 23, 23);
+    padding: 25px 20px;
+}
+
+.navbar .content-logo{
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width: 868px){
+}
+
+
+
+/* section 1 */
+.sec1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ca3900;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.sec1 h1,
+.sec1 h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.sec1 .sec1-txt {
+    position: relative; /* Change to relative for better mobile compatibility */
+    top: 0;
+    left: 0;
+    transform: none; /* Remove transform */
+    margin-top: 10rem; /* Add margin for spacing */
+    padding: 0 20px; /* Add padding for better text alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text and button */
+    gap: 20px; /* Add gap between text and button */
+}
+
+.gotofeature button {
+    margin-top: 50px;
+    padding: 10px 50px; /* Add padding for better button size */
+    font-size: 1rem; /* Set font size */
+    color: #d129ff; /* Text color */
+    background-color: #ffffff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.gotofeature button:hover {
+    background-color: pink;
+}
+
+.gotofeature button a {
+    text-decoration: none;
+}
+
+.sec1-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduce gap for smaller screens */
+    margin-top: 10vw; /* Adjust margin for smaller screens */
+}
+
+.sec1-container .sub-container {
+    height: 20rem; /* Reduce height for smaller screens */
+    width: 20rem; /* Reduce width for smaller screens */
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing */
+    background-size: cover; /* Ensure the background image covers the container */
+    background-position: center; /* Center the background image */
+}
+
+.sec1-container .sub-container h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0px 2px 3px rgb(255, 255, 255);
+    background-color: rgb(231, 165, 255);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Set background images for each sub-container */
+.sec1-container .sub-container:nth-child(1) {
+    background-image: url(./exercize.png);
+}
+
+.sec1-container .sub-container:nth-child(2) {
+    background-image: url(./eat.png);
+}
+
+.sec1-container .sub-container:nth-child(3) {
+    background-image: url(./study.png);
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .sec1 .sec1-txt {
+        margin-top: 7rem; /* Adjust margin for smaller screens */
+    }
+
+    .sec1 .sec1-txt h1{
+        font-size: 18px;
+    }
+    .sec1 .sec1-txt h3{
+        font-size: 14px;
+    }
+
+    .sec1-container .sub-container h4 {
+        /* color: white; */
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .sec1-container {
+        gap: 10px; /* Reduce gap further for smaller screens */
+        margin-top: 5vw; /* Adjust margin for smaller screens */
+    }
+
+    .sec1-container .sub-container {
+        height: 12rem; /* Further reduce height for smaller screens */
+        width: 12rem; /* Further reduce width for smaller screens */
+    }
+
+    .gotofeature button {
+        padding: 8px 16px; /* Reduce padding for smaller screens */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sec1-container .sub-container {
+        height: 10rem; /* Adjust for very small screens */
+        width: 10rem;
+    }
+
+    .sec1-container .sub-container h4 {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .sec1 .sec1-txt h1{
+        font-size: 16px;
+    }
+    .sec1 .sec1-txt h3{
+        font-size: 12px;
+    }
+
+    .gotofeature button {
+        padding: 6px 12px; /* Further reduce padding for very small screens */
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+}
+
+
+@media (max-width: 375px) {
+    .sec1 .sec1-txt h1{
+        font-size: 12px;
+    }
+    .sec1 .sec1-txt h3{
+        font-size: 10px;
+    }
+}
+/* section 2 */
+.sec2 {
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+.sec2 h1 {
+    padding: 50px 10px; /* Reduce padding for smaller screens */
+    font-size: 2rem; /* Use relative units for font size */
+    font-weight: 800;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.features {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    gap: 20px; /* Add some space between the boxes */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.features #box {
+    min-height: 10rem;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 20rem; /* Limit width on larger screens */
+    background-color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 10px 0; /* Adjust margin for smaller screens */
+    box-shadow: rgba(255, 255, 255, 0.758) 0px 5px 15px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.box-item{
+    margin: 15px;
+    color: white;
+    min-width: 15rem;
+    min-height: 8rem;
+    border-radius: 20px;
+    box-shadow: rgb(255, 14, 163) 3px 3px 6px 0px inset, rgba(178, 23, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-item h3 a{
+    color: rgb(233, 205, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    /* letter-spacing: 1px; */
+    word-spacing: 3px;
+    font-weight: 700;
+}
+
+.features #box:hover {
+    transform: scale(1.05); /* Add hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .sec2 h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .features {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .features #box {
+        min-height: 8rem; /* Reduce height for smaller screens */
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sec2 h1 {
+        font-size: 1.2rem; /* Further reduce font size for very small screens */
+        padding: 20px 10px; /* Adjust padding for very small screens */
+    }
+
+    .features #box {
+        min-height: 6rem; /* Further reduce height for very small screens */
+    }
+}
+
+/* section footer */
+.footer {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: space-between; /* Space out content vertically */
+}
+
+.footer h1 {
+    position: relative; /* Change to relative for better compatibility */
+    left: 0;
+    top: 0;
+    transform: none; /* Remove transform */
+    text-align: center; /* Center the text */
+    color: white;
+    transition: all 0.2s ease;
+    margin-top: 30px; /* Add margin for spacing */
+    font-size: 2.5rem; /* Larger font size for laptops */
+    border-bottom: 2px solid white;
+}
+
+.footer h1:hover {
+    color: rgb(47, 47, 255);
+}
+
+.zero {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 100px; /* Add gap between columns */
+    padding: 2rem; /* Reduce padding for better spacing */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    border-bottom: 2px solid white;
+}
+
+.zero .first,
+.zero .second,
+.zero .third {
+    flex: 1; /* Allow columns to grow and take equal space */
+    min-width: 200px; /* Minimum width for columns */
+    max-width: 300px; /* Maximum width for columns */
+    text-align: center; /* Center text inside columns */
+}
+
+.zero p,
+.zero h3 {
+    margin-top: 10px;
+    transition: all 0.2s ease-out;
+    text-align: center; /* Center the text */
+}
+
+.zero p:hover {
+    color: rgb(47, 47, 255);
+}
+
+.zero h3:hover {
+    color: rgb(47, 47, 255);
+}
+
+.lower {
+    position: relative; /* Change to relative for better compatibility */
+    left: 0;
+    bottom: 0;
+    transform: none; /* Remove transform */
+    color: white;
+    transition: all 0.2s ease;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add margin for spacing */
+    font-size: 1rem; /* Default font size for laptops */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.lower:hover {
+    color: rgb(97, 97, 255);
+}
+
+/* Media Queries for Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .footer h1 {
+        font-size: 2rem; /* Slightly smaller font size for laptops */
+    }
+
+    .zero {
+        gap: 50px; /* Reduce gap between columns */
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .zero p,
+    .zero h3 {
+        font-size: 0.9rem; /* Slightly smaller font size for laptops */
+    }
+
+    .lower h4 {
+        font-size: 0.9rem; /* Slightly smaller font size for laptops */
+    }
+}
+
+/* Media Queries for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .footer h1 {
+        font-size: 1.5rem; /* Smaller font size for tablets */
+    }
+
+    .zero {
+        gap: 30px; /* Reduce gap further for tablets */
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center columns */
+        padding: 1rem; /* Reduce padding for tablets */
+    }
+
+    .zero .first,
+    .zero .second,
+    .zero .third {
+        max-width: 100%; /* Allow columns to take full width */
+        border-bottom: 2px solid white;
+    }
+
+    .zero p,
+    .zero h3 {
+        font-size: 0.9rem; /* Smaller font size for tablets */
+    }
+
+    .lower h4 {
+        font-size: 0.9rem; /* Smaller font size for tablets */
+    }
+}
+
+/* Media Queries for Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer h1 {
+        font-size: 1.2rem; /* Smaller font size for mobile devices */
+    }
+
+    .zero {
+        gap: 20px; /* Reduce gap further for mobile devices */
+        padding: 0.5rem; /* Reduce padding for mobile devices */
+    }
+
+    .zero p,
+    .zero h3 {
+        font-size: 0.8rem; /* Smaller font size for mobile devices */
+    }
+
+    .lower h4 {
+        font-size: 0.8rem; /* Smaller font size for mobile devices */
+    }
+}

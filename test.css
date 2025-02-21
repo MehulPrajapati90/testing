@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-out;
+  background-color: transparent; /* Ensure navbar has a transparent background by default */
+}
+
+.navbar.sticky {
+  background-color: rgb(23, 23, 23);
+  padding: 25px 20px;
+}
+
+/* Ensure the "Coders." text is white */
+.navbar .content-logo h1 {
+  color: white; /* Explicitly set the color to white */
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust font size if needed */
+}
+
+.login {
+  background: none;
+}
+
+.navbar .login button {
+  margin: 0px 10px;
+  font-size: 15px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+.navbar .login button:hover {
+  color: #3232ff;
+}
+
+/* Sidebar */
+.sidebar {
+  /* z-index: 100; */
+  position: fixed;
+  top: 5rem; /* Position below the navbar */
+  left: 0;
+  min-height: 100vh;
+  width: 50px;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.sidebar .sidemenu {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar .sidemenu img {
+  margin-top: 50px;
+  margin-left: 0;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border-radius: 5px;
+}
+
+/* Test Section Rules.*/
+
+#rules {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 2rem 0 2rem; /* Reduce padding for better spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Center text */
+  background-color: #000000; /* Optional: Add a background color for better visibility */
+}
+
+#rules h1 {
+  margin: 0 50px 0 70px;
+  color: white;
+  font-size: 2.5rem; /* Adjust font size */
+  margin-bottom: 2rem; /* Add margin below the heading */
+}
+
+.mainrules {
+  margin: 0 40px 0 70px;
+  background-color: #2a2a2a; /* Optional: Add a background color */
+  padding: 2rem; 
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  max-width: 600px; /* Limit the width for better readability */
+  width: 100%; /* Ensure it takes full width on smaller screens */
+}
+
+.mainrules h3 {
+  color: white;
+  font-size: 1.5rem; /* Adjust font size */
+  margin-bottom: 1.5rem; /* Add margin below the heading */
+}
+
+.mainrules p {
+  color: #ccc; /* Light gray color for better readability */
+  font-size: 1rem; /* Adjust font size */
+  margin-bottom: 1rem; /* Add margin below each paragraph */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  #rules {
+    padding: 10rem 2rem 0 2rem; /* Reduce padding for smaller screens */
+  }
+
+  #rules h1 {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+    margin-bottom: 1.5rem; /* Adjust margin */
+  }
+
+  .mainrules {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+
+    margin-left: 90px;
+  }
+
+  .mainrules h3 {
+    font-size: 1.25rem; /* Reduce font size for smaller screens */
+    margin-bottom: 1rem; /* Adjust margin */
+  }
+
+  .mainrules p {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    margin-bottom: 0.8rem; /* Adjust margin */
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  #rules {
+    padding: 10rem 2rem 0 2rem; /* Further reduce padding for mobile devices */
+  }
+
+  #rules h1 {
+    font-size: 1rem; /* Further reduce font size for mobile devices */
+    margin-bottom: 1rem; /* Adjust margin */
+  }
+
+  .mainrules {
+    padding: 1rem; /* Further reduce padding for mobile devices */
+  }
+
+  .mainrules h3 {
+    font-size: 1.1rem; /* Further reduce font size for mobile devices */
+    margin-bottom: 0.8rem; /* Adjust margin */
+  }
+
+  .mainrules p {
+    font-size: 0.8rem; /* Further reduce font size for mobile devices */
+    margin-bottom: 0.6rem; /* Adjust margin */
+  }
+}
+
+/* Main test. */
+.test {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  padding-top: 5rem; /* Add padding to avoid overlap with the fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px 10px 0px 60px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black; /* Ensure text inside the container is black */
+}
+
+.container h1 {
+  text-align: center;
+  color: #333;
+  padding: 10px 0 30px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+.question input {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-out; /* Add transition for hover effect */
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* .result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+} */
+
+/* test Result */
+.lower-test {
+  max-width: 100%;
+  min-height: 20rem;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#test-result {
+  margin: 0 20px 0 70px;
+  min-height: 5rem;
+  width: 15rem; /* Use width instead of max-width for consistent sizing */
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.526); /* Optional: Add a shadow for better visibility */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+#test-result h2{
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 426px) {
+  .container h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 375px) {
+  .container h1 {
+    font-size: 22px;
+  }
+}
